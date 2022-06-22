@@ -1,9 +1,10 @@
+# import the necessary packages
 import os
 
-# Name of TFDS Dataset
+# TFDS Dataset for the model
 DATASET = "div2k/bicubic_x4"
 
-# Define the shard size and batch size
+# Define the Shard Size for TFRecord and Training and Inference Size for GANs
 SHARD_SIZE = 256
 TRAIN_BATCH_SIZE = 64
 INFER_BATCH_SIZE = 8
@@ -26,35 +27,36 @@ PRETRAIN_EPOCHS = 2500
 FINETUNE_EPOCHS = 2500
 STEPS_PER_EPOCH = 10
 
-
-# Path to the dataset
+# Define the path to dataset
 BASE_DATA_PATH = "dataset"
 DIV2K_PATH = os.path.join(BASE_DATA_PATH, "div2k")
 
-# Define the path to tf_records for GPU Training
+# Path to tfrecords for GPU Training
 GPU_BASE_TFR_PATH = "tfrecord"
 GPU_DIV2K_TFR_TRAIN_PATH = os.path.join(GPU_BASE_TFR_PATH, "train")
 GPU_DIV2K_TFR_TEST_PATH = os.path.join(GPU_BASE_TFR_PATH, "test")
 
-# Define the path to the tfrecords for TPU Training
+# Path to the tfrecords for TPU training
 TPU_BASE_TFR_PATH = "gs://<PATH_TO_GCS_BUCKET>/tfrecord"
 TPU_DIV2K_TFR_TRAIN_PATH = os.path.join(TPU_BASE_TFR_PATH, "train")
 TPU_DIV2K_TFR_TEST_PATH = os.path.join(TPU_BASE_TFR_PATH, "test")
 
-# Path to out base directory
+
+# Path to our Base Output directory
 BASE_OUTPUT_PATH = "outputs"
 
-# GPU Training SRGAN model paths
-GPU_PRETRAINED_GENERATOR_MODEL = os.path.join(
-    BASE_OUTPUT_PATH, "models", "pretrained_generator")
+# GPU training SRGAN model paths
+GPU_PRETRAINED_GENERATOR_MODEL = os.path.join(BASE_OUTPUT_PATH,
+                                              "models", "pretrained_generator")
 GPU_GENERATOR_MODEL = os.path.join(BASE_OUTPUT_PATH, "models",
                                    "generator")
 
 # TPU training SRGAN model paths
 TPU_OUTPUT_PATH = "gs://<PATH_TO_GCS_BUCKET>/outputs"
-TPU_PRETRAINED_GENERATOR_MODEL = os.path.join(
-    TPU_OUTPUT_PATH, "models", "pretrained_generator")
-TPU_GENERATOR_MODEL = os.path.join(TPU_OUTPUT_PATH, "models", "generator")
+TPU_PRETRAINED_GENERATOR_MODEL = os.path.join(TPU_OUTPUT_PATH,
+                                              "models", "pretrained_generator")
+TPU_GENERATOR_MODEL = os.path.join(TPU_OUTPUT_PATH, "models",
+                                   "generator")
 
 # define the path to the inferred images and to the grid image
 BASE_IMAGE_PATH = os.path.join(BASE_OUTPUT_PATH, "images")
