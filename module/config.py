@@ -58,6 +58,6 @@ TPU_PRETRAINED_GENERATOR_MODEL = os.path.join(TPU_OUTPUT_PATH,
 TPU_GENERATOR_MODEL = os.path.join(TPU_OUTPUT_PATH, "models",
                                    "generator")
 
-# define the path to the inferred images and to the grid image
+# Define the path to the inferred images and to the grid image
 BASE_IMAGE_PATH = os.path.join(BASE_OUTPUT_PATH, "images")
 GRID_IMAGE_PATH = os.path.join(BASE_IMAGE_PATH, "grid.png")
