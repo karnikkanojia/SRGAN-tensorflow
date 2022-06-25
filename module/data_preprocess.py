@@ -1,9 +1,9 @@
+from tensorflow._api.v2.io import FixedLenFeature
+from tensorflow._api.v2.io import parse_single_example
+from tensorflow._api.v2.io import parse_tensor
+from tensorflow._api.v2.image import flip_left_right
+from tensorflow._api.v2.image import rot90
 import tensorflow as tf
-from tf.io import FixedLenFeature
-from tf.io import parse_single_example
-from tf.io import parse_tensor
-from tf.image import flip_left_right
-from tf.image import rot90
 
 # Define AUTOTUNE object
 try:
