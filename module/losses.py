@@ -1,7 +1,6 @@
-import tensorflow as tf
-from tf.keras.losses import MeanSquaredError
-from tf.keras.losses import BinaryCrossEntropy
-from tf.keras.losses import Reduction
+from keras.losses import MeanSquaredError
+from keras.losses import BinaryCrossEntropy
+from keras.losses import Reduction
 from tensorflow import reduce_mean
 
 
